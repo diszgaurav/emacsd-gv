@@ -1,7 +1,8 @@
 ;;; gv-c.el --- setup C env
 ;;; Commentary:
 ;;; sets up C editing environment
-(provide 'gv-c)
+
+;;; Code:
 
 (require 'cc-mode)
 (require 'semantic)
@@ -66,3 +67,6 @@
 (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 (define-key ggtags-mode-map (kbd "C-c g d") 'ggtags-find-definition)
 (define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+
+(provide 'gv-c)
+;;; gv-c.el ends here

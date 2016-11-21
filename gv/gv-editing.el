@@ -1,14 +1,13 @@
 ;;; gv-editing.el --- setup editing
 ;;; Commentary:
 ;;; sets up general editing environment
-(provide 'gv-editing)
 
 ;;; Code:
 
 ;;;----------------------------------------------------------------------
 ;;; projectile
 ;;;----------------------------------------------------------------------
-(projectile-global-mode)
+(projectile-mode)
 
 ;;;----------------------------------------------------------------------
 ;;; cleanups
@@ -69,7 +68,7 @@ If point is already there, move to the beginning of the line.
 Effectively toggle between the first non-whitespace character and
 the beginning of the line.
 
-If ARG is not nil or 1, move forward ARG - 1 lines first. If
+If ARG is not nil or 1, move forward ARG - 1 lines first.  If
 point reaches the beginning or end of the buffer, stop there."
   (interactive "^p")
   (setq arg (or arg 1))
@@ -87,8 +86,7 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key (kbd "C-a") 'prelude-move-beginning-of-line)
 
 (defadvice kill-ring-save (before slick-copy activate compile)
-  "When called interactively with no active region, copy a single
-line instead."
+  "When called interactively with no active region, copy a single line instead."
   (interactive
    (if mark-active (list (region-beginning) (region-end))
      (message "Copied line")
@@ -96,8 +94,7 @@ line instead."
            (line-beginning-position 2)))))
 
 (defadvice kill-region (before slick-cut activate compile)
-  "When called interactively with no active region, kill a single
-  line instead."
+  "When called interactively with no active region, kill a single line instead."
   (interactive
    (if mark-active (list (region-beginning) (region-end))
      (list (line-beginning-position)
@@ -305,3 +302,13 @@ line instead."
 
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;;;----------------------------------------------------------------------
+;;; flycheck
+;;;----------------------------------------------------------------------
+(require 'flycheck)
+(global-flycheck-mode)
+
+(provide 'gv-editing)
+
+;;; gv-editing.el ends here

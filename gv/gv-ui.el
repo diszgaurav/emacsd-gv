@@ -1,7 +1,6 @@
 ;;; gv-ui.el --- setup ui
 ;;; Commentary:
 ;;; sets up startup and user interface
-(provide 'gv-ui)
 
 ;;; Code:
 
@@ -81,4 +80,5 @@
 (global-fci-mode 1)
 (setq fci-rule-column 80)
 
+(provide 'gv-ui)
 ;;; gv-ui.el ends here
