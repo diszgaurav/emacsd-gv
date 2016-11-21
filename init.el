@@ -12,7 +12,7 @@
 	     . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq package-list '(indent-guide company-c-headers flyspell-popup ido-yes-or-no ido-ubiquitous fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing volatile-highlights smartparens clean-aindent-mode undo-tree ggtags))
+(setq package-list '(indent-guide company-c-headers flyspell-popup ido-yes-or-no ido-ubiquitous fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing volatile-highlights smartparens clean-aindent-mode undo-tree ggtags flycheck ranger))
 
 ;;; fetch the list of packages available
 (unless package-archive-contents
@@ -40,7 +40,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (indent-guide company-c-headers flyspell-popup ido-yes-or-no fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing))))
+    (ranger indent-guide company-c-headers flyspell-popup ido-yes-or-no fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
