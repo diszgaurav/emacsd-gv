@@ -12,7 +12,7 @@
 	     . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq package-list '(indent-guide company-c-headers flyspell-popup ido-yes-or-no ido-ubiquitous fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing volatile-highlights smartparens clean-aindent-mode undo-tree ggtags flycheck ranger highlight-symbol))
+(setq package-list '(indent-guide company-c-headers flyspell-popup ido-yes-or-no ido-ubiquitous fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing volatile-highlights smartparens clean-aindent-mode undo-tree ggtags flycheck ranger highlight-symbol racer rustfmt))
 
 ;;; fetch the list of packages available
 (unless package-archive-contents
@@ -32,6 +32,7 @@
 (require 'gv-editing)
 (require 'gv-python)
 (require 'gv-c)
+(require 'gv-rust)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -40,7 +41,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (highlight-symbol ranger indent-guide company-c-headers flyspell-popup ido-yes-or-no fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing))))
+    (racer rustfmt highlight-symbol ranger indent-guide company-c-headers flyspell-popup ido-yes-or-no fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
