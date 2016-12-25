@@ -28,10 +28,13 @@
 ;;;----------------------------------------
 (add-to-list 'load-path "~/.emacs.d/gv/")
 
+(require 'gv-user)
 (require 'gv-ui)
 (require 'gv-editing)
+(require 'gv-abbrevs)
 (require 'gv-python)
 (require 'gv-c)
+(require 'gv-blog)
 (require 'gv-rust)
 
 (custom-set-variables

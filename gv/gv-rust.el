@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-(setq racer-rust-src-path "~/tools/src/rust/src")
+(setq racer-rust-src-path gv-user-rust-src-dir)
 
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
