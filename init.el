@@ -35,8 +35,8 @@
 (require 'gv-python)
 (require 'gv-c)
 (require 'gv-blog)
+(require 'ox-twbs)
 (require 'gv-rust)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,12 +44,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (racer rustfmt highlight-symbol ranger indent-guide company-c-headers flyspell-popup ido-yes-or-no fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing))))
+    (volatile-highlights undo-tree sublime-themes sphinx-doc smex smartparens rustfmt ranger racer projectile powerline ox-twbs nord-theme mustache-mode leuven-theme indent-guide ido-yes-or-no ido-ubiquitous highlight-symbol ggtags flyspell-popup flycheck flx-ido fill-column-indicator elpy duplicate-thing company-c-headers clean-aindent-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(put 'dired-find-alternate-file 'disabled nil)
-(put 'upcase-region 'disabled nil)
