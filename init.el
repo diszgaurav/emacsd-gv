@@ -12,7 +12,7 @@
 	     . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq package-list '(indent-guide company-c-headers flyspell-popup ido-yes-or-no ido-ubiquitous fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing volatile-highlights smartparens clean-aindent-mode undo-tree ggtags flycheck ranger highlight-symbol racer rustfmt))
+(setq package-list '(indent-guide company-c-headers flyspell-popup ido-yes-or-no ido-ubiquitous fill-column-indicator sphinx-doc elpy smex projectile powerline leuven-theme flx-ido duplicate-thing volatile-highlights smartparens clean-aindent-mode undo-tree ggtags flycheck ranger highlight-symbol))
 
 ;;; fetch the list of packages available
 (unless package-archive-contents
@@ -35,7 +35,6 @@
 (require 'gv-python)
 (require 'gv-c)
 (require 'gv-blog)
-(require 'ox-twbs)
 (require 'gv-rust)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

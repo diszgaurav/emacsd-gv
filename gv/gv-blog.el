@@ -3,10 +3,11 @@
          :base-directory "~/project/blog/diszgaurav.github.io/static/org"
          :base-extension "org"
          :publishing-directory "~/project/blog/diszgaurav.github.io/"
-         :publishing-function org-twbs-publish-to-html
+         :publishing-function org-html-publish-to-html
          :recursive t
-         :headline-levels 3
+         :headline-levels 4
          :html-preamble "<h3><a href=\"index.html\">gv.io</a></h3>"
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"static/gvorg.css\"/><meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />"
          :author "Gaurav Verma"
          :email "diszgaurav@gmail.com"
          :auto-sitemap t
@@ -24,9 +25,6 @@
          )
         )
       )
-
-(setq org-export-with-sub-superscripts nil)
-(defvar org-twbs--pre/postamble-class "container" "CSS class used for pre/postamble")
 
 (provide 'gv-blog)
 ;;; gv-blog.el ends here
