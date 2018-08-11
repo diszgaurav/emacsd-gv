@@ -44,7 +44,7 @@
 ;;; font, color theme
 ;;;----------------------------------------------------------------------
 (setq default-frame-alist '((font . "Hermit-11")))
-(load-theme 'leuven t)
+(load-theme 'atom-one-dark t)
 (powerline-default-theme)
 
 ;;;----------------------------------------------------------------------

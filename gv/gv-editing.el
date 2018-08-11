@@ -23,26 +23,12 @@
 (define-key flyspell-mode-map (kbd "C-;") #'flyspell-popup-correct)
 
 ;;;----------------------------------------------------------------------
-;;; ido, fuzzy matching for files, commands
+;;; ivy
 ;;;----------------------------------------------------------------------
-(require 'ido)
-(ido-mode +1)
-(ido-everywhere 1)
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
 
-(require 'ido-ubiquitous)
-(ido-ubiquitous-mode 1)
-
-(flx-ido-mode +1)
-;; disable ido faces to see flx highlights
-(setq ido-use-faces nil)
-
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
-(require 'ido-yes-or-no)
-(ido-yes-or-no-mode t)
 
 ;;;----------------------------------------------------------------------
 ;;; complete anything
@@ -161,11 +147,11 @@ there's a region, all lines that region covers will be duplicated."
                (`(,beg . ,end) (prelude-get-positions-of-line-or-region))
                (region (buffer-substring-no-properties beg end)))
     (-dotimes arg
-      (lambda (n)
-        (goto-char end)
-        (newline)
-        (insert region)
-        (setq end (point))))
+	      (lambda (n)
+		(goto-char end)
+		(newline)
+		(insert region)
+		(setq end (point))))
     (goto-char (+ origin (* (length region) arg) arg))))
 
 ;; prelude-core.el
