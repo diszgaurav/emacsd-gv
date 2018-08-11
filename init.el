@@ -37,6 +37,7 @@
                      elpy
 		     sphinx-doc
                      ;; rust
+                     racer
                      rust-mode
 		     ))
 

@@ -43,7 +43,7 @@
 ;;;----------------------------------------------------------------------
 ;;; font, color theme
 ;;;----------------------------------------------------------------------
-(setq default-frame-alist '((font . "Hermit-11")))
+(setq default-frame-alist '((font . "Liberation Mono-14")))
 (load-theme 'atom-one-dark t)
 (powerline-default-theme)
 
