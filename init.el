@@ -19,6 +19,7 @@
                      ;; editing
 		     clean-aindent-mode
 		     counsel
+                     flx
 		     undo-tree
 		     volatile-highlights
                      duplicate-thing
@@ -39,6 +40,8 @@
                      ;; rust
                      racer
                      rust-mode
+                     ;; markdown
+                     markdown-mode
 		     ))
 
 ;;; fetch the list of packages available
@@ -69,7 +72,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (rust-mode sphinx-doc elpy ggtags company-c-headers highlight-symbol projectile flyspell-popup flycheck smartparens indent-guide fill-column-indicator duplicate-thing volatile-highlights undo-tree counsel clean-aindent-mode ranger powerline atom-one-dark-theme))))
+    (flx markdown-mode rust-mode sphinx-doc elpy ggtags company-c-headers highlight-symbol projectile flyspell-popup flycheck smartparens indent-guide fill-column-indicator duplicate-thing volatile-highlights undo-tree counsel clean-aindent-mode ranger powerline atom-one-dark-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
