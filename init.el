@@ -13,13 +13,13 @@
 
 (setq package-list '(
                      ;; ui
-		     atom-one-dark-theme
+		     leuven-theme
                      powerline
                      ranger
                      ;; editing
 		     clean-aindent-mode
-		     counsel
-                     flx
+                     flx-ido
+                     smex
 		     undo-tree
 		     volatile-highlights
                      duplicate-thing
@@ -65,6 +65,7 @@
 (require 'gv-python)
 (require 'gv-c)
 (require 'gv-rust)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -72,7 +73,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flx markdown-mode rust-mode sphinx-doc elpy ggtags company-c-headers highlight-symbol projectile flyspell-popup flycheck smartparens indent-guide fill-column-indicator duplicate-thing volatile-highlights undo-tree counsel clean-aindent-mode ranger powerline atom-one-dark-theme))))
+    (markdown-mode racer sphinx-doc elpy ggtags company-c-headers highlight-symbol projectile flyspell-popup flycheck smartparens indent-guide fill-column-indicator duplicate-thing volatile-highlights undo-tree flx-ido clean-aindent-mode ranger powerline atom-one-dark-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
