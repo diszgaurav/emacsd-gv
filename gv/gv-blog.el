@@ -19,7 +19,22 @@
 (setq my-site-project-path "~/proj/blog/blog/")
 (setq my-site-publish-path "~/proj/blog/diszgaurav.github.io/blog/")
 
-(setq my-site-extra-head "<link rel='stylesheet' href='/static/main.css' />")
+(setq my-site-extra-head "
+<link rel='stylesheet' href='/static/main.css'/>
+<link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet' />
+
+<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.2/css/all.css\" integrity=\"sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay\" crossorigin=\"anonymous\">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-74245839-5\"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-74245839-5');
+</script>")
+
 (setq my-site-header-file (concat my-site-project-path "templates/header.html"))
 (setq my-site-footer-file (concat my-site-project-path "templates/footer.html"))
 
@@ -91,7 +106,7 @@
    :sitemap-sort-files anti-chronologically
    :sitemap-format-entry my-site-format-entry
    :with-toc nil
-   :section-numbers nil
+   :section-numbers t
 
    :publishing-function org-html-publish-to-html
    :recursive t)))
