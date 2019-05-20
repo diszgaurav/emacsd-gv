@@ -18,8 +18,10 @@
                      ranger
                      ;; editing
 		     clean-aindent-mode
-                     flx-ido
-                     smex
+                     ;; flx-ido
+                     ;; smex
+                     counsel
+                     flx
 		     undo-tree
 		     volatile-highlights
                      duplicate-thing
@@ -57,6 +59,7 @@
 ;;; add custom files
 ;;;----------------------------------------
 (add-to-list 'load-path "~/.emacs.d/gv/")
+(add-to-list 'load-path "~/tools/org-cv/")
 
 (require 'gv-user)
 (require 'gv-ui)
@@ -65,6 +68,8 @@
 (require 'gv-python)
 (require 'gv-c)
 (require 'gv-rust)
+(require 'gv-org)
+(require 'gv-blog)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -73,10 +78,12 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (markdown-mode racer sphinx-doc elpy ggtags company-c-headers highlight-symbol projectile flyspell-popup flycheck smartparens indent-guide fill-column-indicator duplicate-thing volatile-highlights undo-tree flx-ido clean-aindent-mode ranger powerline atom-one-dark-theme))))
+    (ox-twbs org2blog markdown-mode racer sphinx-doc elpy ggtags company-c-headers highlight-symbol projectile flyspell-popup flycheck smartparens indent-guide fill-column-indicator duplicate-thing volatile-highlights undo-tree flx-ido clean-aindent-mode ranger powerline atom-one-dark-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'downcase-region 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)

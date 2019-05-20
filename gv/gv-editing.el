@@ -25,20 +25,20 @@
 ;;;----------------------------------------------------------------------
 ;;; ido, flx
 ;;;----------------------------------------------------------------------
-(require 'flx-ido)
-(ido-mode 1)
-(ido-everywhere 1)
-(flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-(setq ido-enable-flex-matching t)
-(setq ido-use-faces nil)
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-;; (ivy-mode 1)
-;; (setq ivy-use-virtual-buffers t)
-;; (setq ivy-count-format "(%d/%d) ")
-;; (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+;; (require 'flx-ido)
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (flx-ido-mode 1)
+;; ;; disable ido faces to see flx highlights.
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-use-faces nil)
+;; (require 'smex)
+;; (smex-initialize)
+;; (global-set-key (kbd "M-x") 'smex)
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 
 ;;;----------------------------------------------------------------------
 ;;; complete anything
