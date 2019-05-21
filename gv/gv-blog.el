@@ -22,6 +22,7 @@
 (setq my-site-extra-head "
 <link rel='stylesheet' href='/static/main.css'/>
 <link href='https://fonts.googleapis.com/css?family=PT+Sans&display=swap' rel='stylesheet' />
+<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap' rel='stylesheet' />
 
 <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.2/css/all.css\" integrity=\"sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay\" crossorigin=\"anonymous\">
 
@@ -94,7 +95,7 @@ gtag('config', 'UA-74245839-5');
    :html-head-include-default-style nil
    :html-head-include-scripts nil
    :html-home/up-format ""
-
+   :options ^:{}
    :html-preamble ,(add-html-file my-site-header-file)
    :html-postamble ,(add-html-file my-site-footer-file)
 
